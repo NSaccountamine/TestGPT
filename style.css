@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#startBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#status {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+#results {
+    margin-top: 20px;
+}
