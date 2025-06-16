@@ -53,9 +53,13 @@ window.addEventListener('DOMContentLoaded', () => {
         resultsSection.style.display = 'block';
 
         const timesDiv = document.getElementById('times');
-        timesDiv.innerHTML = reactionTimes.map((t, i) => `Trial ${i + 1}: ${Math.round(t)} ms`).join('<br>');
-        const avg = reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length;
-        document.getElementById('average').textContent = `Average: ${Math.round(avg)} ms`;
+        timesDiv.innerHTML = reactionTimes
+            .map((t, i) => `Trial ${i + 1}: ${Math.round(t)} ms`)
+            .join('<br>');
+        const avg =
+            reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length;
+        document.getElementById('average').textContent =
+            `Average: ${Math.round(avg)} ms`;
 
         const summary = {
             age,
@@ -63,6 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
             reactionTimes: reactionTimes.map(t => Math.round(t)),
             average: Math.round(avg)
         };
-        document.getElementById('summary').textContent = JSON.stringify(summary, null, 2);
+        document.getElementById('summary').textContent =
+            JSON.stringify(summary, null, 2);
     }
 });
