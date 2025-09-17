@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding Course Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-logo" aria-hidden="true">🎓</div>
+          <div class="brand-text">
+            <h1>Course Studio</h1>
+            <p>Craft onboarding journeys with ease.</p>
+          </div>
+        </div>
+        <button class="button primary" id="new-course" type="button">
+          + New course
+        </button>
+        <div class="course-filters" aria-hidden="true">
+          <span class="chip">Onboarding</span>
+          <span class="chip">Productivity</span>
+          <span class="chip">Culture</span>
+        </div>
+        <div class="course-list" id="course-list"></div>
+      </aside>
+      <main class="workspace" aria-live="polite">
+        <section class="panel" id="overview-panel">
+          <header class="panel-header">
+            <div>
+              <h2>Course Overview</h2>
+              <p class="subtitle">
+                Define the learning experience for your new teammates.
+              </p>
+            </div>
+            <span class="status-pill" id="status-pill">Draft</span>
+          </header>
+          <form class="stack" id="course-form">
+            <label class="field">
+              <span>Course title</span>
+              <input
+                type="text"
+                placeholder="e.g. Product Onboarding Accelerator"
+                data-field="title"
+                required
+              />
+            </label>
+            <div class="grid two">
+              <label class="field">
+                <span>Target audience</span>
+                <input
+                  type="text"
+                  placeholder="New product specialists"
+                  data-field="audience"
+                />
+              </label>
+              <label class="field">
+                <span>Suggested duration (hrs)</span>
+                <input type="number" min="1" step="0.5" data-field="duration" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Learning goals</span>
+              <textarea
+                rows="3"
+                placeholder="Describe what success looks like after this course"
+                data-field="goals"
+              ></textarea>
+            </label>
+            <label class="field">
+              <span>Key tools & resources</span>
+              <textarea
+                rows="2"
+                placeholder="List the tools or documents participants will need"
+                data-field="resources"
+              ></textarea>
+            </label>
+            <label class="field">
+              <span>Welcome message</span>
+              <textarea
+                rows="3"
+                placeholder="Give learners a warm welcome and set expectations"
+                data-field="welcome"
+              ></textarea>
+            </label>
+          </form>
+        </section>
+        <section class="panel" id="structure-panel">
+          <header class="panel-header">
+            <div>
+              <h2>Learning Path</h2>
+              <p class="subtitle">
+                Curate sections, lessons, and interactive touchpoints.
+              </p>
+            </div>
+            <button class="button ghost" id="add-section" type="button">
+              + Add section
+            </button>
+          </header>
+          <div class="sections" id="sections"></div>
+        </section>
+        <section class="panel preview" id="preview-panel">
+          <header class="panel-header">
+            <div>
+              <h2>Participant Preview</h2>
+              <p class="subtitle">
+                Share this snapshot or export it as onboarding notes.
+              </p>
+            </div>
+            <button class="button outline" id="export-plan" type="button">
+              Export plan
+            </button>
+          </header>
+          <div class="preview-content" id="preview"></div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
