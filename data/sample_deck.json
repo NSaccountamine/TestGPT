@@ -1,0 +1,24 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answer": "Paris",
+    "hint": "It's known as the City of Light.",
+    "tags": ["geography", "europe"]
+  },
+  {
+    "question": "Define encapsulation in object-oriented programming.",
+    "answer": "Encapsulation is the bundling of data with the methods that operate on that data while restricting direct access to some of the object's components.",
+    "hint": "It often involves access modifiers like private or public.",
+    "tags": ["programming", "oop"]
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "tags": ["web", "networking"]
+  },
+  {
+    "question": "Name the process plants use to convert sunlight into chemical energy.",
+    "answer": "Photosynthesis",
+    "tags": ["biology"]
+  }
+]
